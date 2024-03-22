@@ -63,8 +63,8 @@ export async function generateForm(
       description: responseObj.description,
       questions: responseObj.questions,
     });
-
-    revalidatePath("/");
+  //  alert("form created successfully")
+  //   revalidatePath("/");
     return {
       message: "success",
       data: { formId: dbFormId },
