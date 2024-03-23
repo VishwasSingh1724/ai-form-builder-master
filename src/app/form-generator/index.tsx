@@ -47,9 +47,9 @@ const FormGenerator = (props: Props) => {
   const plausible = usePlausible()
 
   useEffect(() => {
-    if (state.message === "success") {
+    if (state?.message === "success") {
       setOpen(false);
-      navigate(state.data.formId);
+      // navigate(state.data.formId);
     }
 
   }, [state.message])

@@ -57,14 +57,14 @@ export async function generateForm(
     console.log(json);
 
     const responseObj = JSON.parse(json.choices[0].message.content);
-
+    
     const dbFormId = await saveForm({
       name: responseObj.name,
       description: responseObj.description,
       questions: responseObj.questions,
     });
   //  alert("form created successfully")
-  //   revalidatePath("/");
+    revalidatePath("/");
     return {
       message: "success",
       data: { formId: dbFormId },
